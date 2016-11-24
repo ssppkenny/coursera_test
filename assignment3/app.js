@@ -1,19 +1,24 @@
 (function() {
   'use strict';
   angular.module('NarrowItDownApp', []).controller('NarrowItDownController', NarrowItDownController)
-  .service('MenuSearchService', MenuSearchService).directive('foundItems', FoundItems);
+  .service('MenuSearchService', MenuSearchService).directive('foundItems', FoundItemsDirective);
 
   // .directive('foundItems', FoundItems)
 
   NarrowItDownController.$inject = ['$scope', 'MenuSearchService'];
 
   function NarrowItDownController($scope, MenuSearchService) {
-    var ctrl = this;
-    ctrl.inputtext = "";
-    ctrl.getMatchedMenuItems = function(searchTerm) {
-      var promise = MenuSearchService.getMatchedMenuItems(ctrl.inputtext);
+    var list = this;
+    list.removeItem = function(index) {
+      console.log("test");
+      list.found.splice(index,1);
+    }
+
+    list.inputtext = "";
+    list.getMatchedMenuItems = function(searchTerm) {
+      var promise = MenuSearchService.getMatchedMenuItems(list.inputtext);
       promise.then(function(response) {
-        ctrl.found = response;
+        list.found = response;
       });
 
     }
@@ -45,15 +50,22 @@
   }
 
 
-    function FoundItems() {
+    function FoundItemsDirective() {
       var ddo = {
         templateUrl: 'foundItems.html',
-        restrict: 'E',
         scope: {
-          list: '=myList'
-        }
+          items: '<',
+          onRemove : '&'
+        },
+        controller: FoundItemsController,
+        controllerAs : 'list',
+        bindToController: true
       };
       return ddo;
+    }
+
+    function FoundItemsController() {
+      var list = this;
     }
 
 
