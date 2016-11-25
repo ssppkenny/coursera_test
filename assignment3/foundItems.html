@@ -1,3 +1,4 @@
+<p ng-if="list.items.length == 0;">Nothing found</p>
 <ul ng-repeat="item in list.items">
-  <li> {{item.name}} <button class="btn" ng-click="list.onRemove({index: $index})">Remove</button></li>
+  <li> {{item.name}} <button class="btn" ng-click="list.onRemove({index: $index})">Don't want this one!</button></li>
 </ul>
