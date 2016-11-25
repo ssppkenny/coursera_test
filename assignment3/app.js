@@ -34,7 +34,7 @@
        if ( searchTerm.length > 0 ) {
          var promise = $http({
            method: 'GET',
-           url: 'http://davids-restaurant.herokuapp.com/menu_items.json'
+           url: 'https://davids-restaurant.herokuapp.com/menu_items.json'
          });
          var found = [];
          return promise.then(function(response) {
