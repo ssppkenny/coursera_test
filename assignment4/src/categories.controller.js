@@ -10,7 +10,6 @@ function CategoriesListController(MenuDataService, categories) {
   var categoriesList = this;
   categoriesList.categories = categories.data;
 
-
 }
 
 })();
