@@ -1,0 +1,25 @@
+<div>
+  <span ng-if="myinfoCtrl.getInfo() == null">Not Signed Up Yet
+  <a ui-sref="public.signup">Sign Up Now</a>
+  </span>
+ <span ng-if="myinfoCtrl.getInfo() != null">
+   Registered as
+ </span>
+  <ul>
+    <li ng-repeat="prop in myinfoCtrl.getProperties()">
+      {{prop}} {{myinfoCtrl.getProperty(prop)}}
+    </li>
+  </ul>
+  <ul ng-if="myinfoCtrl.getInfo() != null">
+    Favorite dish
+    <li>
+      {{myinfoCtrl.getMenuItemName()}}
+    </li>
+    <li>
+      {{myinfoCtrl.getMenuItemDescription()}}
+    </li>
+    <li>
+      <img ng-src="{{myinfoCtrl.getMenuItemImage()}}">
+    </li>
+  </ul>
+</div>

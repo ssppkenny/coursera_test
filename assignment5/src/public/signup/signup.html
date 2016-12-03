@@ -1,0 +1,32 @@
+<div class="mycontainer">
+<form name="signupForm" novalidate>
+  <label for="firstname">Firstname:
+    <input type="text" name="firstname" ng-model="signupCtrl.firstname"
+        required minlength="4" ng-maxlength="10"
+    >
+    <span ng-if="signupForm.firstname.$error.required && signupForm.firstname.$touched">Firstname is required</span>
+  </label>
+  <label for="lastname">
+    Lastname:
+    <input type="text" name="lastname" ng-model="signupCtrl.lastname"
+        required minlength="4" ng-maxlenght="10">
+    <span ng-if="signupForm.lastname.$error.required && signupForm.lastname.$touched">Lastname is required</span>
+  </label>
+  <label for="email">
+    E-Mail:
+    <input type="text" name="email" ng-model="signupCtrl.email" required>
+    <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">Email is required</span>
+  </label>
+  <label for="phonenumber">
+    Phonenumber: <input type="text" name="phonenumber" ng-model="signupCtrl.phonenumber"  pattern="(\d{3})-(\d{3})-(\d{4})">
+    <span ng-if="signupForm.phonenumber.$invalid && signupForm.phonenumber.$touched">Phone number must have format ###-###-####</span>
+  </label>
+  <label for="menunumber">
+    Menu number:
+  <input type="text" name="menunumber" ng-model="signupCtrl.menunumber">
+  <span ng-if="signupCtrl.error > 0">Menu item doesn't exist</span>
+  <span ng-if="signupCtrl.requestProcessed">Your information has been saved</span>
+</label>
+  <button ng-disabled="signupForm.$invalid" ng-click="signupCtrl.go()">Submit</button>
+</form>
+</div>
