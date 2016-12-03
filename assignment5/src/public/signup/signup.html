@@ -2,23 +2,23 @@
 <form name="signupForm" novalidate>
   <label for="firstname">Firstname:
     <input type="text" name="firstname" ng-model="signupCtrl.firstname"
-        required minlength="4" ng-maxlength="10"
+        required minlength="4" ng-maxlength="10" placeholder="Enter firstname"
     >
     <span ng-if="signupForm.firstname.$error.required && signupForm.firstname.$touched">Firstname is required</span>
   </label>
   <label for="lastname">
     Lastname:
     <input type="text" name="lastname" ng-model="signupCtrl.lastname"
-        required minlength="4" ng-maxlenght="10">
+        required minlength="4" ng-maxlenght="10" placeholder="Enter lastname">
     <span ng-if="signupForm.lastname.$error.required && signupForm.lastname.$touched">Lastname is required</span>
   </label>
   <label for="email">
     E-Mail:
-    <input type="text" name="email" ng-model="signupCtrl.email" required>
+    <input type="text" name="email" ng-model="signupCtrl.email" required placeholder="Enter email">
     <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">Email is required</span>
   </label>
   <label for="phonenumber">
-    Phonenumber: <input type="text" name="phonenumber" ng-model="signupCtrl.phonenumber"  pattern="(\d{3})-(\d{3})-(\d{4})">
+    Phonenumber: <input type="text" name="phonenumber" ng-model="signupCtrl.phonenumber"  pattern="(\d{3})-(\d{3})-(\d{4})" placeholder="Enter phone ###-###-####">
     <span ng-if="signupForm.phonenumber.$invalid && signupForm.phonenumber.$touched">Phone number must have format ###-###-####</span>
   </label>
   <label for="menunumber">
