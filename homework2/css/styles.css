@@ -1,28 +1,89 @@
-p {
+* {
+  box-sizing: border-box;
+}
+span {
   border: 0px solid black;
   font-family: Helvetica;
+  font-size: 14px;
   color: black;
-  background-color: gray;
+  background-color: #989898;
   box-sizing: border-box;
-  margin: 0;
-  padding: 10px;
+  padding: 0px;
+  line-height: 90%;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Helvetica;
+}
+
+.pdiv {
+  margin-top: -8px;
+}
+
+.spacing {
+  width : 60%;
+  height: 30px;
+  float: left;
 }
 
 .firstitem {
-  float:right;
-  background-color: #DB7093;
+  float: right;
+  background-color: #DD9094;
+  width: 40%;
+  height: 40px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  margin-top: -10px;
+  margin-right: -10px;
 }
 
 .seconditem {
-  float:right;
-  background-color: #DB7093;
+  float: right;
+  background-color: #CD2E3A;
+  width: 40%;
+  height: 40px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  margin-top: -10px;
+  margin-right: -10px;
+  color: white;
 }
 
 .thirditem {
-  float:right;
-  background-color: #DB7093;
+  float: right;
+  background-color:  #E4D694;
+  width: 40%;
+  height: 40px;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  margin-top: -10px;
+  margin-right: -10px;
 }
 
+div .outer {
+  position: relative;
+  margin-right: -15px;
+  margin-left: 15px;
+}
+
+div .box {
+  background-color: #989898;
+  left: 3%;
+  right: 3%;
+  width: 95%;
+  margin-left: 5px;
+  margin-top: 5px;
+  
+  padding: 10px;
+  border: 3px solid black;
+}
 
 
 /* Simple Responsive Framework. */
@@ -34,7 +95,7 @@ p {
 @media (min-width: 992px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
-    border: 1px solid green;
+    border: 1px solid white;
   }
   .col-lg-1 {
     width: 8.33%;
@@ -78,7 +139,7 @@ p {
 @media (min-width: 768px) and (max-width: 991px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
-    border: 1px solid green;
+    border: 1px solid white;
   }
   .col-md-1 {
     width: 8.33%;
@@ -114,6 +175,6 @@ p {
     width: 91.66%;
   }
   .col-md-12 {
-    width: 100%;
+    width: 102.5%;
   }
 }
