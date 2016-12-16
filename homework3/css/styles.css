@@ -1,0 +1,43 @@
+h1 {
+  text-align: center;
+}
+
+.menutext {
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.menuitem {
+  width: 100%;
+  text-align: left;
+}
+
+#bs-example-navbar-collapse-1 {
+  background-color: lightgray;
+  color: black;
+}
+
+.menulink {
+  text-align: center;
+}
+
+.navheading {
+    position:relative;
+    width: 100%;
+    font-size: 2em;
+}
+
+.navbar-header {
+  position: relative;
+  width: 100%;
+  border: 2px solid black;
+  padding-left: 10px;
+}
+
+.spacing {
+
+
+  padding: 10px;
+  background-color: white;
+}
