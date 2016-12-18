@@ -1,3 +1,8 @@
+body {
+  font-family: Helvetica;
+  color: black;
+}
+
 h1 {
   text-align: center;
 }
@@ -7,38 +12,104 @@ h1 {
   margin: 10px;
 }
 
-
-.menuitem {
-  width: 100%;
-  text-align: left;
-}
-
-#bs-example-navbar-collapse-1 {
-  background-color: lightgray;
+.navbar-default .navbar-text {
   color: black;
 }
 
-.menulink {
-  text-align: center;
+.navbar-text {
+  font-weight: bold;
+  font-size: 2em;
+  color: black;
 }
 
+.menuitem {
+  background-color: gray;
+}
+
+
+.menulink {
+  text-align: center;
+  color: black;
+  zoom: 1.5;
+}
+
+.row {
+  margin: 0px;
+}
+
+.menulinkfirst {
+  text-align: center;
+  color: black;
+  zoom: 1.5;
+  border-width: 2px 2px 0px 2px;
+  border-style: solid;
+  border-color: black;
+}
+
+.menulinkother {
+  text-align: center;
+  color: black;
+  zoom: 1.5;
+  border-width: 2px 2px 2px 2px;
+ border-style: solid;
+  border-color: black;
+}
+
+
+#bs-example-navbar-collapse-1 {
+
+   color: black;
+   background-color: white;
+
+}
+
+a {
+  color: black;
+}
+
+container-fluid {
+  border: 0;
+  padding: 0;
+}
+
+
 .navheading {
-    position:relative;
+    clear: both;
     width: 100%;
     font-size: 2em;
+    text-align: center;
+    border: 0;
+}
+
+.container-fullwidth {
+  font-weight: bold;
+  color: black;
 }
 
 .navbar-header {
+
   position: relative;
-  width: 100%;
-  border: 2px solid black;
-  padding-left: 10px;
+  padding: 10px;
+  background-color: gray;
+
 }
 
-.spacing {
+.navbar-default .navbar-brand {
+  color: black;
+}
 
-  margin-top: 52px;
-  background-color: white;
-  margin-left: -15px;
-  margin-right: -15px;
+h4 {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+   .navbar-header {
+     width: 100%;
+   }
+}
+
+@media (max-width: 767px) {
+
 }
