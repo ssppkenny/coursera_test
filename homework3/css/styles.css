@@ -12,11 +12,15 @@ h1 {
   margin: 10px;
 }
 
+
 .navbar-default .navbar-text {
   color: black;
+  text-align: center;
+  width: 100%;
 }
 
 .navbar-text {
+  position: relative;
   font-weight: bold;
   font-size: 2em;
   color: black;
